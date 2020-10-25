@@ -28,6 +28,6 @@ public class FetchResponse {
     /**
      * This variable stores the status of the data fetch.
      */
-    private FetchStatus fetchStatus;
+    private FetchStatus dataFetchStatus;
 
 }

@@ -161,7 +161,7 @@ public class HiuFiber {
         if (fetchResponse == null) {
             throw new IllegalStateException("Failed to get response from server");
         }
-        if (FetchStatus.TRANSFERRED.equals(fetchResponse.getFetchStatus()))
+        if (FetchStatus.TRANSFERRED.equals(fetchResponse.getDataFetchStatus()))
             return fetchResponse;
         int i = 5;
         while (i-- > 0) {
@@ -170,7 +170,7 @@ public class HiuFiber {
             if (fetchResponse == null) {
                 throw new IllegalStateException("Failed to get response from server");
             }
-            if (FetchStatus.TRANSFERRED.equals(fetchResponse.getFetchStatus()))
+            if (FetchStatus.TRANSFERRED.equals(fetchResponse.getDataFetchStatus()))
                 return fetchResponse;
         }
         return fetchResponse;

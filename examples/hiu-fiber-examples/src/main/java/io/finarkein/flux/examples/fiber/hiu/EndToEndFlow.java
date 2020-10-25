@@ -25,8 +25,9 @@ public class EndToEndFlow {
     public static void main(String[] args) throws IOException {
         HiuFiber fiber = new HiuFiber();
 
-        // Build a consent request
-        ConsentRequest consentRequest = createConsentRequest();
+        // Build a consent request for a patient
+        String patientId = "<set-patient-id>";
+        ConsentRequest consentRequest = createConsentRequest(patientId);
 
         // Exchange it for a token from the fiber (to be used for making data request)
         ConsentToken consentToken = fiber.createConsent(consentRequest);
@@ -42,9 +43,9 @@ public class EndToEndFlow {
         DataFetchRequest dataFetchRequest = createDataRequest(dataFetchToken);
         DataFetchId dataFetchId = fiber.requestData(dataFetchRequest);
 
-        // Finally, fetch the data! (lookout for )
+        // Finally, fetch the data! (lookout for fetch response status - data present only when it's TRANSFERRED)
         FetchResponse fetchResponse = fiber.fetchData(dataFetchId);
-        // decrypted data
+        // get decrypted data
         List<Data> dataList = Optional.of(fetchResponse.getDataEntry()).orElse(Collections.emptyList());
         for (Data data : dataList) {
             System.out.println("==========================================================");
@@ -54,13 +55,13 @@ public class EndToEndFlow {
         }
     }
 
-    static ConsentRequest createConsentRequest() {
+    static ConsentRequest createConsentRequest(String patientId) {
         return ConsentRequest.builder()
                 .purposeText("Care Management")
                 .purposeCode("CAREMGT")
-                .patientId("zohair.shaikh@sbx")
-                .hipId("lh-28")
-                .hiuId("finarkein-001")
+                .patientId(patientId)
+                .hipId("lh-28") // LiveHealth
+                // .hiuId("finarkein-001") // default (but configurable)
                 .requesterName("Dr. New2")
                 .requesterIdentifierType("REGNO")
                 .requesterIdentifierValue("MH1001")

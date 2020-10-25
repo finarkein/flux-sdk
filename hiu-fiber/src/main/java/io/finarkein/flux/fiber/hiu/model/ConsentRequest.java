@@ -48,7 +48,7 @@ public class ConsentRequest {
     /**
      * This variable stores the hiu Id.
      */
-    private String hiuId;
+    private String hiuId = "finarkein-001";
 
     /**
      * This variable stores the hip Id.
