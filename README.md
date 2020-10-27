@@ -4,9 +4,6 @@ Flux SDK for Java.
 
 ## Quickstart
 
-> Currently, Github Packages needs to configured in your dev environment. 
-> Please check below [section](#install-from-github-packages) to learn more about it.
-
 Simply add the required dependency in your `pom.xml`.
 
 ```xml
