@@ -1,4 +1,4 @@
-# Flux SDK
+# Flux SDK [![Maven Central](https://img.shields.io/maven-central/v/io.finarkein.flux/flux-parent.svg?label=Maven%20Central)](https://search.maven.org/search?q=io.finarkein.flux)
 
 Flux SDK for Java.
 
