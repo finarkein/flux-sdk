@@ -5,7 +5,7 @@
     <parent>
         <artifactId>flux-parent</artifactId>
         <groupId>io.finarkein.flux</groupId>
-        <version>0.1.1-SNAPSHOT</version>
+        <version>0.2.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -15,17 +15,10 @@
     <name>HIU - Flux Fiber</name>
     <description>Flux SDK Fiber for Health Information User (HIU)</description>
 
-    <properties>
-        <version.retrofit>2.9.0</version.retrofit>
-        <version.gson>2.8.6</version.gson>
-        <version.lombok>1.18.10</version.lombok>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>retrofit</artifactId>
-            <version>${version.retrofit}</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
@@ -35,7 +28,6 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>${version.gson}</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
@@ -43,19 +35,8 @@
             <version>${version.retrofit}</version>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${version.lombok}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.finarkein.auth</groupId>
-            <artifactId>finarkein-auth-oauth2</artifactId>
-            <version>0.3.0</version>
-        </dependency>
-        <dependency>
             <groupId>com.typesafe</groupId>
             <artifactId>config</artifactId>
-            <version>1.4.0</version>
         </dependency>
     </dependencies>
 

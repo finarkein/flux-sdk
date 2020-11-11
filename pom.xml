@@ -10,18 +10,22 @@
         <version>1.0.0</version>
     </parent>
 
-    <name>Flux SDK</name>
-    <description>Flux SDK modules</description>
+    <name>Flux Parent</name>
+    <description>Flux Parent POM</description>
     <url>https://github.com/finarkein/flux-sdk</url>
 
     <groupId>io.finarkein.flux</groupId>
     <artifactId>flux-parent</artifactId>
-    <version>0.1.1-SNAPSHOT</version>
+    <version>0.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <version.lombok>1.18.10</version.lombok>
+        <version.retrofit>2.9.0</version.retrofit>
+        <version.gson>2.8.6</version.gson>
+        <version.typesafe-config>1.4.0</version.typesafe-config>
     </properties>
 
     <modules>
@@ -33,12 +37,45 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>io.finarkein.flux</groupId>
+                <artifactId>flux</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.finarkein.flux.fiber</groupId>
                 <artifactId>hiu-fiber</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${version.lombok}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>retrofit</artifactId>
+                <version>${version.retrofit}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${version.gson}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.typesafe</groupId>
+                <artifactId>config</artifactId>
+                <version>${version.typesafe-config}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.finarkein.auth</groupId>
+            <artifactId>finarkein-auth-oauth2</artifactId>
+            <version>0.3.0</version>
+        </dependency>
+    </dependencies>
 
     <licenses>
         <license>

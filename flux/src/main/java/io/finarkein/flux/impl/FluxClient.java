@@ -41,7 +41,7 @@ class FluxClient {
 		if (credentialEnabled)
 			builder.addInterceptor(new RequestInterceptor(FinarkeinCredentials.get()));
 		OkHttpClient http = builder.connectTimeout(100, TimeUnit.SECONDS)
-				.readTimeout(100, TimeUnit.SECONDS).build();
+				.readTimeout(900, TimeUnit.SECONDS).build();
 
 		gson = new GsonBuilder()
 				.setLenient()

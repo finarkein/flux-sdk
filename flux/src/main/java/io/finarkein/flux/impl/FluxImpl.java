@@ -5,6 +5,7 @@ import io.finarkein.flux.Flux;
 import io.finarkein.flux.Pipeline;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Properties;
 import java.util.ServiceLoader;
 
@@ -29,8 +30,12 @@ public class FluxImpl implements Flux {
 			runner = new RemotePipelineRunner(client);
 		else if ("Local".equalsIgnoreCase(runnerType)) {
 			ServiceLoader<PipelineRunner> loader = ServiceLoader.load(PipelineRunner.class);
-			runner = loader.findFirst().orElseThrow(() -> new UnsupportedOperationException("Local Flux Pipeline runner is " +
-					"not supported in current deployment."));
+            Iterator<PipelineRunner> iterator = loader.iterator();
+            if (iterator.hasNext())
+                runner = iterator.next();
+            else
+                throw new UnsupportedOperationException("Local Flux Pipeline runner is " +
+                        "not supported in current deployment.");
 		} else
 			throw new IllegalArgumentException("Error in intialization of Flux. The runner type specified in" +
 					" properties is unknown: " + runnerType);

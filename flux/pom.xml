@@ -5,14 +5,11 @@
     <parent>
         <artifactId>flux-parent</artifactId>
         <groupId>io.finarkein.flux</groupId>
-        <version>0.1.1-SNAPSHOT</version>
+        <version>0.2.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>flux</artifactId>
-    <properties>
-        <version.retrofit>2.9.0</version.retrofit>
-    </properties>
 
     <name>Flux SDK</name>
     <description>Flux Analytics SDK for ETL Operations</description>
@@ -26,7 +23,6 @@
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>retrofit</artifactId>
-            <version>${version.retrofit}</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
@@ -39,20 +35,16 @@
             <version>${version.retrofit}</version>
         </dependency>
         <dependency>
-            <groupId>io.finarkein.auth</groupId>
-            <artifactId>finarkein-auth-oauth2</artifactId>
-            <version>0.3.0</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.typesafe</groupId>
             <artifactId>config</artifactId>
-            <version>1.4.0</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.6</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

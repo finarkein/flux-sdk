@@ -28,7 +28,7 @@ public class PipelineDag {
 	}
 
 	public synchronized void next(Transform current, Transform next) {
-		if (this.dag.edgeValue(current, next).isEmpty()) {
+		if (!this.dag.edgeValue(current, next).isPresent()) {
 			int numOfOuts = (int) this.dag.successors(current).stream().count();
 			this.dag.addNode(next);
 			this.dag.putEdgeValue(current, next, numOfOuts);
