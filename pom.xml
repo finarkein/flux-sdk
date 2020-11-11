@@ -27,6 +27,7 @@
     <modules>
         <module>hiu-fiber</module>
         <module>examples</module>
+        <module>flux</module>
     </modules>
 
     <dependencyManagement>
@@ -57,6 +58,12 @@
         <developer>
             <name>Prathamesh Mungarwadi</name>
             <email>prathmesh.mungarwadi@gmail.com</email>
+            <organization>Finarkein Analytics Pvt. Ltd.</organization>
+            <organizationUrl>https://finarkein.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Nikhil Kurhe</name>
+            <email>nikhil@finarkein.com</email>
             <organization>Finarkein Analytics Pvt. Ltd.</organization>
             <organizationUrl>https://finarkein.com</organizationUrl>
         </developer>
