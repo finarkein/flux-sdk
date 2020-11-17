@@ -5,14 +5,13 @@
     <parent>
         <artifactId>flux-parent</artifactId>
         <groupId>io.finarkein.flux</groupId>
-        <version>0.1.1-SNAPSHOT</version>
+        <version>0.2.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.finarkein.flux.examples</groupId>
     <artifactId>flux-sdk-examples</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.1-SNAPSHOT</version>
 
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
@@ -22,6 +21,7 @@
 
     <modules>
         <module>hiu-fiber-examples</module>
+        <module>flux-analytics-examples</module>
     </modules>
 
 </project>

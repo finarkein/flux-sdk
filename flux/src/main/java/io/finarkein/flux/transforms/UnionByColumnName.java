@@ -1,0 +1,19 @@
+package io.finarkein.flux.transforms;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+public class UnionByColumnName extends DsOp implements MultiInSingleOutDsTransform {
+	private List<String> columns;
+
+	@Override
+	public String toString() {
+		return String.format("UnionByColumnName%s", columns.toString());
+	}
+}
