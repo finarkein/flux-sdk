@@ -9,9 +9,14 @@ Simply add the required dependency in your `pom.xml`.
 ```xml
 <dependencies>
     <dependency>
+        <groupId>io.finarkein.flux</groupId>
+        <artifactId>flux</artifactId>
+        <version>0.2.0</version>
+    </dependency>    
+    <dependency>
         <groupId>io.finarkein.flux.fiber</groupId>
         <artifactId>hiu-fiber</artifactId>
-        <version>0.1.0</version>
+        <version>0.2.0</version>
     </dependency>
 </dependencies>
 ```
